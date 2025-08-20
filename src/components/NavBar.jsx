@@ -1,41 +1,32 @@
 import React from "react";
-import logo from '../assets/WeDo.jpg'
+import logo from '../assets/WeDo.jpg';
 import "../css/navbar.css";
+import login from '../assets/login.png'
 
 function NavBar() {
   return (
-    <div>
-      <nav className="navbar">
-        <img src={logo} alt="Wedo"/>
-        <div className="navbar-left">
+    <nav className="custom-navbar">
+      <div className="navbar-logo">
+        <img src={logo} alt="WeDo" />
+        <div className="navbar-title">
+          <strong>WeDo</strong>
+          <span>Comunique. Colabore. Crie.</span>
         </div>
-        <div className="navbar-center">
-          <ul className="nav-links">
-            <li>
-              <a href="/produtos">Início</a>
-            </li>
-            <li>
-              <a href="/produtos">Produtos</a>
-            </li>
-            <li>
-              <a href="/sobre-nos">Planos</a>
-            </li>
-            <li>
-              <a href="/contato">Contato</a>
-            </li>
-          </ul>
-        </div>
-        <div className="navbar-right">
-          <a href="/cart" className="cart-icon">
-            <i className="fas fa-shopping-cart"></i>
-            <span className="cart-count">0</span>
-          </a>
-          <a href="/account" className="user-icon">
-            <i className="fas fa-user"></i>
-          </a>
-        </div>
-      </nav>
-    </div>
+      </div>
+      <ul className="navbar-links">
+        <li><a href="/">Início</a></li>
+        <li><a href="/produto">Produto</a></li>
+        <li><a href="/planos">Planos</a></li>
+        <li><a href="/contato">Contato</a></li>
+      </ul>
+      <div className="navbar-actions">
+        <a href="/login" className="navbar-login">
+          <img src={login} alt="Login" style={{ width: 20, height: 20, marginRight: 6 }} />
+          Login
+        </a>
+        <a href="/comecar" className="navbar-btn">Começar</a>
+      </div>
+    </nav>
   );
 }
 
