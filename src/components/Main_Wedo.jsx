@@ -1,5 +1,6 @@
 import Button from "react-bootstrap/Button";
 import main from "../assets/main.svg";
+import '../css/main.css';
 
 function Main_Wedo() {
   return (
